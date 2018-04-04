@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ViewForm</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container" style="margin-top:20px;">
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8">
+                    <table class="table table-bordered table-striped table-hover">
+                      <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Status</th>
+                            <th>View</th>
+                            <th>Update</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {{#each arr}}
+                        <tr>
+                          <td>{{this.catname}}</td>
+                          <td>{{this.status}}</td>
+                          <td><a href='/viewdata/{{this.id}}'> View</a></td>
+                          <td><a href='/updatedata/{{this.id}}'> update</a></td>
+                        </tr>
+                        {{/each}}
+                      </tbody>
+                        
+                    </table>
+                </div>
+            </div>
+    </div>
+</body>
+</html>
